@@ -33,6 +33,7 @@ header{
     margin-left: 125px;
     margin-top: 125px;
     
+    
 }
 
 .primeira_impressao h1{
@@ -40,6 +41,7 @@ header{
     font-size: 126px;
     letter-spacing: -2.17px;
     line-height: 112px;
+    margin-top: 0;
 }
 
 .primeira_impressao h3{
@@ -48,6 +50,8 @@ header{
     text-transform: uppercase;
     line-height: 24px;
     letter-spacing: 2px;
+    margin-top: 51px;
+    color: #9E8C6C;
 
 }
 .primeira_impressao a{
@@ -92,6 +96,15 @@ section{
     font-size: 20px;
     line-height: 34px;
     letter-spacing: 0px;
+
+}
+
+.carrer_traits p{
+    line-height: 34px;
+    font-weight: 400px;
+    font-size: 20px;
+    line-height: 38px;
+    margin-bottom: 20px;
 
 }
 
@@ -149,12 +162,31 @@ section{
     height: auto;
     display: flex;
     justify-content: space-between;
+    margin-top: -20px;
 }
 
 .text_experience h3{
     color: #9E8C6C;
 }
 
+.card p{
+    margin-top: -8px;
+}
+
+.education h2{
+    margin-top: 70px;
+}
+
+.education_tips{
+    display: flex;
+    justify-content: space-between;
+    margin-top: -20px;
+}
+
+.education_tips h3{
+    color: #9E8C6C;
+    
+}
 
 footer{
     display: flex;
@@ -169,8 +201,9 @@ footer{
     width: 793px;
     height: 258px;
     margin: 0 auto;
-    padding-top: 176px;
+    padding-top: 158px;
     padding-bottom: 116px;
+    
 }
 
 .block_footer h2{
@@ -193,4 +226,87 @@ footer{
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
+}
+
+
+@media screen and (max-width: 1023px){
+
+    .container{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+        height: auto;
+    }
+
+    .imagem_perfil{
+        margin: 80px auto;
+    }
+
+    .imagem_perfil img{
+        width: 280px;
+        height: 280px;
+    }
+
+    .primeira_impressao{
+        width: 100%;
+        height: auto;
+        margin: -48px auto auto;
+        text-align: center;
+        padding-bottom: 100px;
+    }
+
+    .primeira_impressao h1{
+        font-size: 80px;
+        line-height: 85px;
+    }
+
+    section{
+        align-items: center;
+        flex-direction: column-reverse;
+        padding: 20px;
+        width: 100%;
+        margin: 0 auto;
+        
+    }
+
+    .bloco_esquerdo, .bloco_direito{
+        width: 100%;
+        height: auto;
+        margin: 20px 0;
+    }
+
+    .Experience{
+        margin-top: 108px;
+    }
+
+
+    .about_me{
+        width: 100%;
+    }
+
+    .card{
+        width: 100%;
+        margin-bottom: 100px;
+    }
+
+    .bloco_direito{
+        margin-left: 0;
+    }
+
+    .text_experience, .education_tips{
+        flex-direction: column;
+        width: 100%;
+        
+    }
+
+    .block_footer h2{
+        font-size: 50px;
+        line-height: 60px;
+    }
+
+    .block_footer h3{
+        font-size: 28px;
+        line-height: 36px;
+    }
 }
