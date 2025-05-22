@@ -11,13 +11,10 @@ header{
     display: flex;
     align-content: center;
     justify-content: space-around;
-    width: 1440px;
-    height: 700px;
+    width: 1024px;
+    height: auto;
+    padding: 120px 0 264px 0;
 
-}
-.imagem_perfil{
-    margin-top: 180px;
-    margin-left: 168px;
 }
 
 .imagem_perfil img{
@@ -30,10 +27,7 @@ header{
 .primeira_impressao{
     width: 1440px;
     height: 224px;
-    margin-left: 125px;
-    margin-top: 125px;
-    
-    
+    margin-left: 116px;
 }
 
 .primeira_impressao h1{
@@ -264,7 +258,6 @@ footer{
     section{
         align-items: center;
         flex-direction: column-reverse;
-        padding: 20px;
         width: 100%;
         margin: 0 auto;
         
