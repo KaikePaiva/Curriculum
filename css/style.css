@@ -156,16 +156,14 @@ section{
     height: auto;
     display: flex;
     justify-content: space-between;
-    margin-top: -20px;
+    
 }
 
 .text_experience h3{
     color: #9E8C6C;
 }
 
-.card p{
-    margin-top: -8px;
-}
+
 
 .education h2{
     margin-top: 70px;
@@ -174,7 +172,7 @@ section{
 .education_tips{
     display: flex;
     justify-content: space-between;
-    margin-top: -20px;
+    
 }
 
 .education_tips h3{
