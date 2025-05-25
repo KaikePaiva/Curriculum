@@ -108,12 +108,23 @@ section{
 
 }
 
-.recent_works p{
+
+.recent_works_card{
+    width: 310px;
+    display: flex;
+    justify-content: space-between;
+    color: var();
+}
+
+.recent_works_card a{
+    
+    text-decoration: none;
     color: var(--color-primary);
 }
 
+
 .Experience{
-    margin-top: px;
+    padding-top: 20px;
 }
 
 .bloco_direito{
