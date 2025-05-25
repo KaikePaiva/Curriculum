@@ -275,7 +275,6 @@ footer{
     }
 
     .primeira_impressao h1{
-        font-size: 80px;
         line-height: 85px;
     }
 
@@ -318,12 +317,10 @@ footer{
     }
 
     .block_footer h2{
-        font-size: 50px;
         line-height: 60px;
     }
 
     .block_footer h3{
-        font-size: 28px;
         line-height: 36px;
     }
 }
