@@ -19,7 +19,7 @@ header{
     justify-content: space-around;
     width: 1024px;
     height: auto;
-    padding: 120px 0 264px 0;
+    padding: 120px 0 180px 0;
 
 }
 
@@ -74,6 +74,7 @@ section{
 
 .skill , .awards , .carrer_traits{margin-bottom: 100px;}
 
+
 .bloco_esquerdo{
     margin-top: 123px;
     width: 350px;
@@ -110,20 +111,23 @@ section{
 
 
 .recent_works_card{
-    width: 310px;
+    width: 308px;
     display: flex;
     justify-content: space-between;
-    color: var();
+}
+
+.recent_works_card p{
+    color: var(--color-primary);
 }
 
 .recent_works_card a{
+    color: var(--color-secundary);
     text-decoration: none;
-    color: var(--color-primary);
 }
 
 
 .Experience{
-    padding-top: 20px;
+    padding-top: 44px;
 }
 
 .bloco_direito{
@@ -183,8 +187,6 @@ section{
     color: var(--color-secundary);
 }
 
-
-
 .education h2{
     margin-top: 70px;
 }
@@ -219,6 +221,11 @@ footer{
     
 }
 
+.block_footer a{
+    text-decoration: none;
+    color: var(--color-primary);
+}
+
 .block_footer h2{
     font-weight: 900px;
     font-size: 66px;
@@ -246,14 +253,7 @@ footer{
 }
 
 
-@media screen and (max-width: 1023px){
-    p{
-        font-size: 18px;
-    }
-
-    h2{
-        font-size: 32px;
-    }
+@media screen and(max-width: 1023px){
 
     .container{
         flex-direction: column;
