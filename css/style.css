@@ -1,3 +1,14 @@
+/* Adicionado reset básico para evitar overflow */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Previne scroll horizontal */
+}
+
 :root{
     --color-primary:#0663A6;
     --color-secundary:#9E8C6C; 
@@ -6,6 +17,7 @@
 
 header{
     max-width: 100%;
+    width: 100%; /* Adicionado */
     height: auto;
     background-color: var(--color-tertiary);
     justify-content: center;
@@ -17,10 +29,10 @@ header{
     display: flex;
     align-content: center;
     justify-content: space-around;
-    width: 1024px;
+    width: 100%; /* Mudado de 1024px para 100% */
+    max-width: 1024px; /* Adicionado max-width */
     height: auto;
-    padding: 120px 0 180px 0;
-
+    padding: 120px 20px 180px 20px; /* Adicionado padding lateral */
 }
 
 .imagem_perfil img{
@@ -31,7 +43,8 @@ header{
 }
 
 .primeira_impressao{
-    width: 1440px;
+    width: 100%; /* Mudado de 1440px para 100% */
+    max-width: 600px; /* Adicionado max-width */
     height: 224px;
     margin-left: 116px;
 }
@@ -52,8 +65,8 @@ header{
     letter-spacing: 2px;
     margin-top: 51px;
     color: var(--color-secundary);
-
 }
+
 .primeira_impressao a{
     width: 224px;
     height: 60px;
@@ -63,22 +76,25 @@ header{
     text-decoration: none;
     text-align: center;
     padding: 18px 62px;
+    display: inline-block; /* Adicionado */
 }
 
 section{
     display: flex;
     justify-content: center;
     max-width: 100%;
+    width: 100%; /* Adicionado */
     height: auto;
+    padding: 0 20px; /* Adicionado padding lateral */
 }
 
 .skill , .awards , .carrer_traits{margin-bottom: 100px;}
 
-
 .bloco_esquerdo{
     margin-top: 123px;
     width: 350px;
-    height: 1559px;
+    max-width: 100%; /* Adicionado */
+    height: auto; /* Mudado de altura fixa */
     background-color: rgb(255, 255, 255);
 }
 
@@ -89,7 +105,6 @@ section{
     line-height: 24px;
     letter-spacing: 2px;
     text-transform: uppercase;
-    
 }
 
 .bloco_esquerdo p{
@@ -97,7 +112,6 @@ section{
     font-size: 20px;
     line-height: 34px;
     letter-spacing: 0px;
-
 }
 
 .carrer_traits p{
@@ -106,12 +120,11 @@ section{
     font-size: 20px;
     line-height: 38px;
     margin-bottom: 20px;
-
 }
 
-
 .recent_works_card{
-    width: 308px;
+    width: 100%; /* Mudado de 308px */
+    max-width: 308px; /* Adicionado */
     display: flex;
     justify-content: space-between;
 }
@@ -125,13 +138,13 @@ section{
     text-decoration: none;
 }
 
-
 .Experience{
     padding-top: 44px;
 }
 
 .bloco_direito{
     width: 635px;
+    max-width: 100%; /* Adicionado */
     height: auto;
     margin-top: 123px;
     margin-left: 138px;
@@ -140,18 +153,15 @@ section{
 
 .about_me {
     margin-bottom: 72px;
-    width: 635px;
-    height: 326px;
+    width: 100%; /* Mudado de 635px */
+    height: auto; /* Mudado de altura fixa */
 }
-
 
 .bloco_direito p{
     font-weight: 400px;
     font-size: 20px;
     line-height: 34px;
-    
 }
-
 
 .bloquinho{
     color: var(--color-primary);
@@ -166,7 +176,7 @@ section{
 }
 
 .card{
-    width: 635px;
+    width: 100%; /* Mudado de 635px */
     height: auto;
     margin-bottom: 64px;
 }
@@ -177,10 +187,10 @@ section{
 
 .text_experience{
     max-width: 100%;
+    width: 100%; /* Adicionado */
     height: auto;
     display: flex;
     justify-content: space-between;
-    
 }
 
 .text_experience h3{
@@ -195,30 +205,28 @@ section{
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    
 }
 
 .education_tips h3{
     color: var(--color-secundary);
-    
 }
 
 footer{
     display: flex;
     align-content: center;
     max-width: 100%;
+    width: 100%; /* Adicionado */
     height: 560px;
     background-color: var(--color-tertiary);
 }
 
 .block_footer{
     text-align: center;
-    width: 793px;
+    width: 100%; /* Mudado de 793px */
+    max-width: 793px; /* Adicionado */
     height: 258px;
     margin: 0 auto;
-    padding-top: 158px;
-    padding-bottom: 116px;
-    
+    padding: 158px 20px 116px 20px; /* Adicionado padding lateral */
 }
 
 .block_footer a{
@@ -230,7 +238,6 @@ footer{
     font-weight: 900px;
     font-size: 66px;
     line-height: 82px;
-    
 }
 
 .block_footer h3{
@@ -252,6 +259,7 @@ footer{
     color: var(--color-primary);
 }
 
+/* Media Query corrigida */
 @media screen and (max-width: 1023px) {
     
     .container {
@@ -261,6 +269,7 @@ footer{
         padding: 20px;
         height: auto;
         width: 100%;
+        max-width: none; /* Removido limite */
     }
 
     .imagem_perfil {
@@ -273,10 +282,12 @@ footer{
     .imagem_perfil img {
         width: 280px;
         height: 280px;
+        max-width: 90%; /* Adicionado para telas muito pequenas */
     }
 
     .primeira_impressao {
         width: 100%;
+        max-width: 100%; /* Garante que não ultrapasse */
         height: auto;
         margin: 0 auto;
         text-align: center;
@@ -285,8 +296,8 @@ footer{
     }
 
     .primeira_impressao h1 {
-        font-size: 80px;
-        line-height: 85px;
+        font-size: clamp(50px, 8vw, 80px); /* Responsivo */
+        line-height: 1.1;
         font-weight: 700;
     }
 
@@ -300,32 +311,32 @@ footer{
         display: inline-block;
         width: auto;
         height: auto;
-    
+        max-width: 90%; /* Previne overflow */
     }
 
     section {
         align-items: center;
         flex-direction: column-reverse;
         width: 100%;
-        margin: 0 auto;
-        padding: 0 20px;
+        margin: 0;
+        padding: 0 15px; /* Reduzido padding */
     }
 
     .bloco_esquerdo, .bloco_direito {
         width: 100%;
+        max-width: 100%;
         height: auto;
         margin: 20px 0;
     }
 
     .bloco_esquerdo {
         margin-top: 40px;
-        padding: 0 20px;
+        margin-left: 0;
     }
 
     .bloco_direito {
         margin-left: 0;
         margin-top: 40px;
-        padding: 0 20px;
     }
 
     .Experience {
@@ -353,11 +364,27 @@ footer{
         margin-bottom: 10px;
     }
 
+    .text_experience h4 {
+        margin-top: 5px; /* Adicionado espaçamento */
+    }
+
     .recent_works_card {
         width: 100%;
+        max-width: 100%;
         flex-direction: column;
         align-items: flex-start;
         margin-bottom: 20px;
+    }
+
+    .recent_works_img {
+        width: 100%; /* Adicionado */
+        overflow: hidden; /* Previne overflow de imagens */
+    }
+
+    .recent_works_img img {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
     }
 
     .bloco_esquerdo h3 {
@@ -397,24 +424,26 @@ footer{
 
     footer {
         height: auto;
-        padding: 40px 20px;
+        padding: 40px 15px; /* Reduzido padding */
+        width: 100%;
     }
 
     .block_footer {
         width: 100%;
+        max-width: 100%;
         height: auto;
-        padding: 60px 20px;
+        padding: 60px 15px; /* Reduzido padding */
     }
 
     .block_footer h2 {
-        font-size: 50px;
-        line-height: 60px;
+        font-size: clamp(35px, 6vw, 50px); /* Responsivo */
+        line-height: 1.2;
         font-weight: 900;
     }
 
     .block_footer h3 {
-        font-size: 28px;
-        line-height: 36px;
+        font-size: clamp(22px, 4vw, 28px); /* Responsivo */
+        line-height: 1.3;
         font-weight: 900;
     }
 
